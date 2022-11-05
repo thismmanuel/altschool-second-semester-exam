@@ -28,11 +28,11 @@ function Login() {
         console.log(inputs)
         setInputs(initialState)
         toggleUser()
-        // navigate("/contacts")
+        navigate("/contacts")
     }
 
     if (isloggedIn === true) {
-        return <Navigate replace to="/contacts" />
+        return <Navigate replace to="/" />
     }
 
   return (
