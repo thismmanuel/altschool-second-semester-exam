@@ -1,6 +1,3 @@
-// import Counter from "./counter/Counter";
-// import ControlInput from "./counter/ControlInput";
-// import ControlInput2 from "./counter/ControlInput2";
 import Login from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
@@ -8,6 +5,7 @@ import Contact from "./pages/Contact";
 import Contacts from "./pages/Contacts";
 import Layout from "./Layout";
 import Protected from "./Layout/Protected";
+import './App.css';
 
 function App() {
   return (
@@ -23,9 +21,6 @@ function App() {
             </Route>
             <Route path="*" element={<NotFound />} />
           </Route>
-          {/* <ControlInput /> */}
-          {/* <Counter /> */}
-          {/* <ControlInput2/> */}
         </Routes>
       </BrowserRouter>
     </div>
