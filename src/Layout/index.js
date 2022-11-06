@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 export const AuthContext = createContext(null);
 
 function Layout() {
-    const [isloggedIn, setIsloggedin] = useState(false);
-    const userInfo = useMemo(() => isloggedIn, []);
-    const toggleUser = () => setIsloggedin(prev => !prev);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const userInfo = useMemo(() => isLoggedIn, []);
+    const toggleUser = () => setIsLoggedIn(!isLoggedIn);
     const  meToggle = useCallback(
       () => {
         toggleUser()
@@ -14,10 +14,10 @@ function Layout() {
       [],
     )
 
-    console.log(isloggedIn)
+    console.log(isLoggedIn)
     
   return (
-    <AuthContext.Provider value={[userInfo, meToggle]}>
+    <AuthContext.Provider value={[isLoggedIn, userInfo, meToggle]}>
       <Outlet />
     </AuthContext.Provider>
   );

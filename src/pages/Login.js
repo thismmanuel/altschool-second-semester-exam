@@ -7,7 +7,7 @@ function Login() {
         email: "",
         password: "",
     }
-    const [isloggedIn, toggleUser] = useContext(AuthContext);
+    const [isLoggedIn, userInfo, meToggle] = useContext(AuthContext);
 
     const [inputs, setInputs] = useState(initialState)
     const navigate = useNavigate()
@@ -27,13 +27,13 @@ function Login() {
         e.preventDefault()
         console.log(inputs)
         setInputs(initialState)
-        toggleUser()
+        meToggle()
         navigate("/contacts")
     }
 
-    if (isloggedIn === true) {
-        return <Navigate replace to="/" />
-    }
+    // if (!isLoggedIn) {
+    //     return <Navigate replace to="/" />
+    // }
 
   return (
     <div>

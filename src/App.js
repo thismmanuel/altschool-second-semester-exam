@@ -9,26 +9,19 @@ import Contacts from "./pages/Contacts";
 import Layout from "./Layout";
 import Protected from "./Layout/Protected";
 
-
-
-
 function App() {
-
-  
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-
-          <Route path="/" element={<Login />} />
-          <Route element={<Protected/>}>
-
-          <Route path="/contacts" element={<Contacts/>}>
-            <Route path="/contacts/:id" element={<Contact/>} />
-          </Route>
-          </Route>
-          <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Login />} />
+            <Route element={<Protected />}>
+              <Route path="/contacts" element={<Contacts />}>
+                <Route path="/contacts/:id" element={<Contact />} />
+              </Route>
+            </Route>
+            <Route path="*" element={<NotFound />} />
           </Route>
           {/* <ControlInput /> */}
           {/* <Counter /> */}

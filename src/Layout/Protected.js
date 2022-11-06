@@ -4,9 +4,9 @@ import {AuthContext} from './index'
 
 
 function Protected() {
-    const [isloggedIn] = useContext(AuthContext);
-
-    if(isloggedIn === false){
+    const [isLoggedIn, userInfo, meToggle] = useContext(AuthContext);
+    console.log(isLoggedIn)
+    if(!isLoggedIn){
         return <Navigate replace to="/" />
     }
 
