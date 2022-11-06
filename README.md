@@ -1,3 +1,10 @@
+# HOSTED LINK:
+> https://altschool-second-semester-exam-nine.vercel.app/
+
+# GITHUB LINK:
+>https://github.com/thismmanuel/altschool-second-semester-exam.git
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
